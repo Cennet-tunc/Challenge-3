@@ -4,9 +4,71 @@
 		<meta charset="utf-8">
 		<title>DashboardApi</title>
 		<link rel="stylesheet" href="challenge3.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
 		<script src="challenge3.js" defer></script>
 	</head>
 	<body>
-		<p>hallo</p>
+		<input type="checkbox" id="sidebar-toggle">
+		<!-- Aparte div voor het menu aan de linkerkant -->
+		<div class="sidebar">
+			<!-- Aparte div voor de header van het menu zelf aan de zijkant -->
+			<div class="sidebar-header">
+				<h3 class="logo">
+					<!-- icon overgenomen (ti-...), zie link rel -->
+					<span class="ti-location-arrow"></span>
+					<span>SpaceX</span>
+				</h3> 
+				<!-- icon overgenomen (ti-...), zie link rel -->
+				<label for="sidebar-toggle" class="ti-menu"></label>
+			</div>
+			<!-- Aparte div, voor zijkant (menu), opties voor gebruikers -->
+			<div class="sidebar-menu">
+				<ul>
+					<li>
+						<!-- Losse verwijzing naar dashboard in het menu-->
+						<a href="">
+							<!-- icon overgenomen (ti-...), zie link rel -->
+							<span class="ti-dashboard"></span>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<!-- Losse verwijzing naar member in het menu -->
+						<a href="">
+							<!-- icon overgenomen (ti-...), zie link rel -->
+							<span class="ti-user"></span>
+							<span>Member</span>
+						</a>
+					</li>
+					<li>
+						<!-- Losse verwijzing naar tasks in het menu -->
+						<a href="">
+							<!-- icon overgenomen (ti-...), zie link rel -->
+							<span class="ti-pencil"></span>
+							<span>Tasks</span>
+						</a>
+					</li>
+					<li>
+						<!-- Losse verwijzing naar account in het menu -->
+						<a href="">
+							<!-- icon overgenomen (ti-...), zie link rel -->
+							<span class="ti-desktop"></span>
+							<span>Account</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Alle informatie die direct te zien is, naast het menu op het dashboard -->
+		<div class="main-content">
+			<!-- Alles bovenaan de pagina, in de header -->
+			<header>
+				<div class="search-wrapper">
+					<!-- icon overgenomen (ti-...), zie link rel -->
+					<span class="ti-search"></span>
+					<!-- Hier kan iets worden ingevuld, placeholder geeft al aan dat er hier naar iets gezocht kan worden zo nodig -->
+					<input type="search" placeholder="Search">
+				</div>
+			</header>
 	</body>
 </html>

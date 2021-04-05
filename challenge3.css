@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/*Algemene kleuren, eenmalig hier zetten en later namen ervan overnemen bij aparte tussencodes*/
+:root {
+	--main-color: #3B2FDD;
+	--color-dark: #232733;
+	--text-grey:  #9DA3AA;
+}
+
+* {
+	/*Alles in dit lerrertype weergeven, zonder schreef*/
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0.5px;
+	/*Zonder een decoratie worden weergegeven*/
+	text-decoration: none;
+	/*Geen opsommingstekens of iets*/
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #BBDAF5;
+}
+
+#sidebar-toggle {
+	display: none;
+}
+
+.sidebar {
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	/*Achtergrond kleur, staat in root bovenaan*/
+	background: var(--main-color);
+	/*Logo van SpaceX, naam zelf en hamburgermenu in deze kleur weergeven*/
+	color: #BBE1F3;
+	overflow-y: auto;
+	transition: width 500ms;
+}
+
+.sidebar-header {
+	/*Op een bepaalde manier zetten, waardoor ze netjes staan en niet rommelig door elkaar heen*/
+	display: flex;
+	/*Gelijkmatige tussenruimte SpaceX en hamburgermenu bovenaan de sidebar*/
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	/*Kleine afstand van einde van de sidebar, zodat het er netjes binnen blijft en niet kruist met de uiteindes van de sidebar*/
+	padding: 0rem 1rem;
+}
+
+/*Het menu die zich in de sidebar bevindt, een leeg ruimte creeeren vanaf de zijkant, zodat het niet geplakt is aan de rand*/
+.sidebar-menu {
+	padding: 1rem;
+}
+
+/*Afstand vanaf de onderkant van de tekst, zodat de tekst niet te dicht op elkaar zit*/
+.sidebar li {
+	margin-bottom: 1.3rem;
+}
+
+/*Tekstkleur, overige onder SpaceX en hamburgermenu wit maken, voor een betere leesbaarheid*/
+.sidebar a {
+	color: #FFFFFF;
+	/*Lettergrootte*/
+	font-size: 1rem;
+}
+
+/*Kleine afstand tussen icoon en bijbehorende tekst*/
+.sidebar a span:last-child {
+	padding-left: 0.6rem;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+	width: 60px;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span, 
+#sidebar-toggle:checked ~ .sidebar li span:last-child {
+	display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header, 
+#sidebar-toggle:checked ~ .sidebar li {
+	display: flex;
+	justify-content: center;
+}
+
+/*Zodra op hamburgermenu wordt geklikt, search enz. naar links*/
+#sidebar-toggle:checked ~ .main-content {
+	margin-left: 60px;
+}
+
+/*Zodra op hamburgermenu wordt geklikt, naar links gaan*/
+#sidebar-toggle:checked ~ .main-content header {
+	left: 60px;
+}
+
+header {
+	/*Op zelfde plek blijven, ongeacht of er wordt gescrold of niet*/
+	position: fixed;
+	z-index: 100;
+	/*Breedte, van totale scherm nog 240px van af halen (van het menu) dat die daar bovenaan staat*/
+	width: 100%;
+	/*Achtergrondkleur wit*/
+	background: white;
+	left: 240px;
+	height: 60px;
+	/*Op een bepaalde manier zetten, waardoor ze netjes staan en niet rommelig door elkaar heen*/
+	display: flex;
+	padding: 0rem 1rem;
+	align-items: center;
+	/*Gelijkmatige ruimte tussen onderdelen*/
+	justify-content: space-between;
+	/*Onderkant van de border een zwarte lijn van 1px*/
+	border-bottom: 1px solid black;
+	transition: left 500ms;
+}
+
+.search-wrapper {
+	/*Op een bepaalde manier zetten, waardoor ze netjes staan en niet rommelig door elkaar heen*/
+	display: flex;
+	align-items: center;
+}
+
+
+/*Geen randen of iets, enkel invuloptie met placeholder die zichtbaar is*/
+.search-wrapper input {
+	border: 0;
+	outline: 0;
+	padding: 1rem;
+	height: 38px;
+}
+
+/*Laptop*/
+@media only screen and (max-width: 1200px) {
+	.sidebar {
+		width: 60px;
+		z-index: 150;
+	}
+
+	.sidebar .sidebar-header h3 span, 
+	.sidebar li span:last-child {
+		display: none;
+	}
+
+	.sidebar .sidebar-header, 
+	.sidebar li {
+		display: flex;
+		justify-content: center;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar {
+		width: 240px;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span, 
+	#sidebar-toggle:checked ~ .sidebar li span:last-child {
+		display: inline;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar .sidebar-header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar li {
+		display: block;
+	}
+
+	#sidebar-toggle:checked ~ .main-content {
+		margin-left: 60px;
+	}	
+
+	#sidebar-toggle:checked ~ .main-content header {
+		left: 60px;
+	}
+
+}
+
+/*iPad*/
+@media only screen and (max-width: 768px) {
+	.search-wrapper {
+		margin-left: 0px;
+	}
+
+}
