@@ -100,6 +100,12 @@ body {
 	left: 60px;
 }
 
+.main-content {
+	position: relative;
+	margin-left: 300px;
+	transition: margin-left 500ms;
+}
+
 header {
 	/*Op zelfde plek blijven, ongeacht of er wordt gescrold of niet*/
 	position: fixed;
@@ -136,6 +142,16 @@ header {
 	height: 38px;
 }
 
+main {
+	margin-top: 60px;
+	/*Achtergrondkleur*/
+	background: #BBDAF5;
+	/*Minimaal van totale grootte van het scherm*/
+	min-height: 90vh;
+	padding: 1rem 3rem;
+}
+
+
 /*Laptop*/
 @media only screen and (max-width: 1200px) {
 	.sidebar {
@@ -153,6 +169,16 @@ header {
 		display: flex;
 		justify-content: center;
 	}
+
+	.main-content {
+		margin-left: 60px;
+	}
+
+	.main-content header {
+		left: 60px;
+		width: calc(100%-60px);
+	}
+
 
 	#sidebar-toggle:checked ~ .sidebar {
 		width: 240px;
@@ -182,10 +208,16 @@ header {
 
 }
 
+
 /*iPad*/
 @media only screen and (max-width: 768px) {
-	.search-wrapper {
-		margin-left: 0px;
-	}
+	
+
+}
+
+/*Mobiel*/
+@media only screen and (max-width: 480px) {
+
+	
 
 }
