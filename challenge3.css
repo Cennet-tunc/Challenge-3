@@ -2,7 +2,7 @@
 
 /*Algemene kleuren, eenmalig hier zetten en later namen ervan overnemen bij aparte tussencodes*/
 :root {
-	--main-color: #3B2FDD;
+	--main-color: #464377;
 	--color-dark: #232733;
 	--text-grey:  #9DA3AA;
 }
@@ -20,7 +20,7 @@
 }
 
 body {
-	background-color: #BBDAF5;
+	background-color: #BCB5D8;
 }
 
 #sidebar-toggle {
@@ -37,7 +37,7 @@ body {
 	/*Achtergrond kleur, staat in root bovenaan*/
 	background: var(--main-color);
 	/*Logo van SpaceX, naam zelf en hamburgermenu in deze kleur weergeven*/
-	color: #BBE1F3;
+	color: #E6E4FE;
 	overflow-y: auto;
 	transition: width 500ms;
 }
@@ -145,7 +145,7 @@ header {
 main {
 	margin-top: 60px;
 	/*Achtergrondkleur*/
-	background: #BBDAF5;
+	background: #BCB5D8;
 	/*Minimaal van totale grootte van het scherm*/
 	min-height: 90vh;
 	padding: 1rem 3rem;
