@@ -241,7 +241,10 @@ main {
 
 /*Mobiel*/
 @media only screen and (max-width: 480px) {
+	#map {
+		height: 10vh;
+		width: 10vh;
+	}
 
-	
 
 }
