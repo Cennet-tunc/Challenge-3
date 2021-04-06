@@ -18,19 +18,7 @@ var cities = [
   {
     name: 'Nijmegen',
     coordinates: [5.85278, 51.8425]
-  },
-  {
-    name: 'Maastricht',
-    coordinates: [5.68889, 50.84833]
-  },
-  {
-    name: 'Groningen',
-    coordinates: [6.56667, 53.21917]
-  },
-  {
-    name: 'Enschede',
-    coordinates: [6.89583, 52.21833]
-  },
+  }
 ];
 
 // Initiate map
@@ -90,7 +78,7 @@ function plotImageOnMap(icon, city) {
         source: "point_" + city.name,
         layout: {
           "icon-image": "weatherIcon_" + city.name,
-          "icon-size": 1.3
+          "icon-size": 1.5
         }
       });
     }

@@ -29,6 +29,11 @@ h2 {
 	font-size: 40px;
 }
 
+h3 {
+	font-size: 25px;
+	color: #7774A0;
+}
+
 #sidebar-toggle {
 	display: none;
 }
@@ -221,30 +226,44 @@ main {
 		font-size: 30px;
 	}
 
+	h3 {
+		font-size: 20px;
+	}
+
 	#map {
 		height: 70vh;
 		width: 80vh;
 	}
-
 }
-
 
 /*iPad*/
 @media only screen and (max-width: 768px) {
+	h2 {
+		font-size: 33px;
+	}
+
+	h3 {
+		font-size: 25px;
+	}
+
 	#map {
 		height: 20vh;
 		width: 30vh;
 	}
-
-	
 }
 
 /*Mobiel*/
 @media only screen and (max-width: 480px) {
+	h2 {
+		font-size: 25px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
 	#map {
 		height: 10vh;
 		width: 10vh;
 	}
-
-
 }
